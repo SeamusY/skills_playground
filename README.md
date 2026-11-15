@@ -33,11 +33,11 @@ Ported from the pstack create/maintain verification skills onto Copilot project 
 | [`maintain-verification-skill`](.github/skills/maintain-verification-skill/SKILL.md) | Compares the feature map to source and exercises the features live. It may update the map. It may not hide a product bug by editing docs. |
 | [`verify-change`](.github/skills/verify-change/SKILL.md) | For every mapped feature a change touches, runs `verify-<app>`. Unit tests going green is not done. No evidence file, not done. |
 | [`verify-pinboard`](.github/skills/verify-pinboard/SKILL.md) | The generated skill for the demo. Proved once on add-pin. |
-| [`skill-refiner`](.github/skills/skill-refiner/SKILL.md) | `/skill-refiner`. After an implement or verify session, proposes sharper edits to skills that were actually used. |
+| [`skill-refiner`](.github/skills/skill-refiner/SKILL.md) | `/skill-refiner`. After an implement or verify session, proposes sharper edits to skills that were actually used. Template: [`.github/skills/skill-refiner/requirements-template.md`](.github/skills/skill-refiner/requirements-template.md). References: [`.github/skills/skill-refiner/references/`](.github/skills/skill-refiner/references/). |
 
 Each feature file uses the headings `Sub-features`, `How to get to it (user POV)`, `Driving it with <cli>`, and `Gotchas`.
 
-Run `/skill-refiner` after an implement or verify session, when you want the skills themselves tightened. It does not replace `/maintain-verification-skill`: that skill owns the feature map, and this one owns the skills. It lists Accepted, Rejected, and Backlog, and it does not edit until you accept an item. A backlog example that has not been applied is [`.github/skills/skill-refiner/examples/verify-change.md`](.github/skills/skill-refiner/examples/verify-change.md).
+Run `/skill-refiner` after an implement or verify session, when you want the skills themselves tightened. Copy [requirements-template.md](.github/skills/skill-refiner/requirements-template.md) to `.github/skills/skill-refiner/requirements.md`, and put references in [references/](.github/skills/skill-refiner/references/). It does not replace `/maintain-verification-skill`: that skill owns the feature map, and this one owns the skills. It lists Accepted, Rejected, and Backlog, and it does not edit until you accept an item. A backlog example that has not been applied is [`.github/skills/skill-refiner/examples/verify-change.md`](.github/skills/skill-refiner/examples/verify-change.md).
 
 ## Demo
 
