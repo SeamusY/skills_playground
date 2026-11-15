@@ -1,0 +1,36 @@
+{
+  "feature": "add-pin",
+  "ok": true,
+  "action": {
+    "command": "drive add-pin",
+    "method": "POST",
+    "url": "http://127.0.0.1:46017/pins",
+    "form": {
+      "title": "Release checklist",
+      "note": "Tag and publish"
+    }
+  },
+  "result": {
+    "postStatus": 303,
+    "location": "/",
+    "getStatus": 200,
+    "visibleTitles": [
+      "Release checklist"
+    ],
+    "visibleNotes": [
+      "Tag and publish"
+    ]
+  },
+  "sideEffects": {
+    "pinsFile": ".verify-runtime/pinboard/data/pins.json",
+    "pins": [
+      {
+        "id": "mwhg9ikt-1",
+        "title": "Release checklist",
+        "note": "Tag and publish",
+        "createdAt": "2026-11-15T06:24:47.693Z"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-15T06:24:47.696Z"
+}
