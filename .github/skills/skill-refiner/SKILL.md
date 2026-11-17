@@ -26,12 +26,12 @@ If `references/` has no file besides `README.md`, name that path and one referen
 
 ## 1. Evidence
 
-Gather use, not a vibe. Take whatever this environment actually has:
+Gather use, not a vibe. "Evidence" here is how a skill was loaded, skipped, or followed. That may be only the chat you are in now — do not require a code diff, a commit, or a `verify-*` proof file when the chat already shows the use. Take whatever this environment actually has:
 
-- the current chat
+- the current chat (enough on its own when it shows the use)
 - files the user attaches
 - `git log` and `git blame` for `.github/skills/`
-- evidence files a `verify-*` skill names (in this repo, `evidence/`)
+- evidence files a `verify-*` skill names (in this repo, `evidence/`) — those prove an app drive, not skill load or follow, unless the chat ties them to one
 - Copilot or agent logs that are present in the repo
 
 Name each source you used. If one is missing, say so and continue with the rest. Do not look for `agent-transcripts/` or a Grok transcript path.
