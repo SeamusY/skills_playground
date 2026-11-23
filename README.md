@@ -23,6 +23,22 @@ Lifecycle:
 
 `/implement` is the installed plugin and is not patched here. This repo's Copilot instructions and the [`verify-change`](.github/skills/verify-change/SKILL.md) skill tell the agent to run `/verify-change` after `/tdd` and before `/code-review`.
 
+## PRD intake — `prd-to-spec`
+
+[`prd-to-spec`](.github/skills/prd-to-spec/SKILL.md) is a project skill. It is not a copy of the plugin. Interview style comes from Matt Pocock's [grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md); spec format stays with [to-spec](https://github.com/mattpocock/skills/blob/main/skills/engineering/to-spec/SKILL.md).
+
+```
+/prd-to-spec .github/skills/prd-to-spec/examples/feature-coverage.md
+```
+
+Reads that path, interviews on the design-tree frontier, recaps, and waits for an explicit yes. After confirmation it prepares a handoff to `/to-spec`. Upstream `to-spec` sets `disable-model-invocation: true`, so this skill must not claim chained invocation ran: it prepares the package and tells you to run `/to-spec`. If the plugin is missing, it says it cannot invoke `to-spec` and stops. It does not publish a spec as an issue or start coding unless you asked.
+
+Desk-check fixtures: [`.github/skills/prd-to-spec/examples/`](.github/skills/prd-to-spec/examples/). The node test only checks that the skill text still covers those cases. It does not run Copilot.
+
+```bash
+node --test .github/skills/prd-to-spec/prd-to-spec.test.mjs
+```
+
 ## Layer 3 — Verification skills
 
 Ported from the pstack create/maintain verification skills onto Copilot project skills. Generated verify skills go to `.github/skills/verify-<app>/`, never `.cursor/skills/`.
